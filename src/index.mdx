@@ -1,0 +1,25 @@
+---
+name: Getting Started
+route: /
+---
+
+import { Playground } from 'docz'
+
+# Reload issue
+
+<Playground>
+  {() => {
+    const EventuallyComplexComponent = () => {
+      const [name, setName] = React.useState("");
+      return (
+        <div>
+          <input value={name} onChange={e => setName(e.target.value)} />
+          {/* comment the like break and try again */}
+          <br />
+          {name}
+        </div>
+      );
+    };
+    return <EventuallyComplexComponent />;
+  }}
+</Playground>
